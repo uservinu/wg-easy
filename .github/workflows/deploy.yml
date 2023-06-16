@@ -36,5 +36,5 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64/v8
-        tags: weejewel/wg-easy:latest, weejewel/wg-easy:${{ env.RELEASE }}
+        platforms: linux/amd64
+        tags: vinuvnairde/wg-easy:latest, weejewel/wg-easy:${{ env.RELEASE }}
