@@ -40,6 +40,8 @@ module.exports = class WireGuard {
           config = await fs.readFile(path.join(WG_PATH, 'wg0.json'), 'utf8');
           config = JSON.parse(config);
           debug('Configuration loaded.');
+          debug(`Configuration: ${config.server.address}`);
+          
         } catch (err) {
           const privateKey = await Util.exec('wg genkey');
           const publicKey = await Util.exec(`echo ${privateKey} | wg pubkey`, {
