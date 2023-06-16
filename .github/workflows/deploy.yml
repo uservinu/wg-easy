@@ -37,4 +37,4 @@ jobs:
       with:
         push: true
         platforms: linux/amd64
-        tags: vinunairde/wg-easy:latest, weejewel/wg-easy:${{ env.RELEASE }}
+        tags: vinunairde/wg-easy:latest, vinunairde/wg-easy:${{ env.RELEASE }}
