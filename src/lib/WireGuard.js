@@ -94,7 +94,7 @@ module.exports = class WireGuard {
 # Server
 [Interface]
 PrivateKey = ${config.server.privateKey}
-Address = ${config.server.address}/24
+Address = ${config.server.address}
 ListenPort = 51820
 PreUp = ${WG_PRE_UP}
 PostUp = ${WG_POST_UP}
@@ -241,7 +241,7 @@ Endpoint = ${WG_HOST}:${WG_PORT}`;
         });
 
         if (!client) {
-          address = `${WG_DEFAULT_ADDRESS.replace('x', i)}/32`;
+          address = `${WG_DEFAULT_ADDRESS.replace('x', i)}/24`;
           break;
         }
       }
